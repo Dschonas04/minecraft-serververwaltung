@@ -3,7 +3,7 @@
   "id": "stumm",
   "version": "${version}",
   "name": "Stumm",
-  "description": "Stummschalten, Werkzeugwache, Spender-Ehrentafel, goldene Spendernamen und Hexenhütten für Hexenfarmen. Nur Server.",
+  "description": "Stummschalten, Werkzeugwache, Tierwache (getötete Tiere), Spender-Ehrentafel, goldene Spendernamen und Hexenhütten für Hexenfarmen. Nur Server.",
   "authors": ["Dschonas04"],
   "license": "MIT",
   "environment": "server",

@@ -3,6 +3,11 @@
 Änderungen am Repo als Ganzem. Die Mods haben eigene Versionen; Loot Scaler führt
 zusätzlich [sein eigenes Changelog](mods/loot-scaler/CHANGELOG.md).
 
+## [Unreleased]
+
+### Hinzugefügt
+- stumm 1.5.0: Tierwache protokolliert getötete Tiere mit Täter, Ort und Besitzer (Log und `logs/tiere.log`).
+
 ## [2.1.0] - 2026-10-14
 
 ### Geändert
