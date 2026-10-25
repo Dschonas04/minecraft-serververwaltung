@@ -38,6 +38,7 @@ Alle Bau-Skripte schreiben Befehle auf die Standardausgabe, mit `-o datei` in ei
 | `bau/teich.py --mitte "x y z" --rx 12 --rz 8` | natürlicher Teich mit Ufer und Pflanzen |
 | `bau/weg.py --von "x z" --bis "x z" --hoehe y` | Trampelpfad mit Laternen |
 | `bau/begruenen.py --mitte "x y z" --radius R --baeume N --blumen N --frei "x1 z1 x2 z2"` | Bäume und Blumen, Sperrflächen ausgespart |
+| `bau/pulvermuehle.py --mitte "x y z"` | Schwarzpulver-Mühle mit Create: Wasserrad, Mixer (32 U/min), Becken, Ein- und Ausgabekiste (2 Kohle + 1 Lohenstaub = 3 Schwarzpulver) |
 | `bau/ersetzen.py --mitte "x z" --radius R --tausch alt=neu` | Blöcke im Gebiet austauschen |
 
 Beispiel:
