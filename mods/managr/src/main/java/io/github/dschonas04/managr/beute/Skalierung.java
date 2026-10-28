@@ -94,11 +94,11 @@ public final class Skalierung {
     }
 
     private static Art artBestimmen(LootContext kontext) {
-        BlockState zustand = kontext.getOptionalParameter(LootContextParams.BLOCK_STATE);
+        BlockState zustand = kontext.getOptional(LootContextParams.BLOCK_STATE);
         if (zustand != null) {
             return istErz(zustand) ? Art.ERZ : Art.NICHTS;
         }
-        if (kontext.getOptionalParameter(LootContextParams.THIS_ENTITY) instanceof LivingEntity wesen
+        if (kontext.getOptional(LootContextParams.THIS_ENTITY) instanceof LivingEntity wesen
                 && !(wesen instanceof Player)) {
             return Art.MOB;
         }

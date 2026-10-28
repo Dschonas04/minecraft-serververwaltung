@@ -1,6 +1,6 @@
 # mc-serververwaltung
 
-Werkzeuge zum Verwalten eines Minecraft-Servers (Fabric, Minecraft 26.2): eigene Server-Mods, Datenpakete und Skripte.
+Werkzeuge zum Verwalten eines Minecraft-Servers (Fabric, Minecraft 26.3): eigene Server-Mods, Datenpakete und Skripte.
 
 | Ordner | Inhalt |
 |---|---|
@@ -40,7 +40,7 @@ fällt weg, nichts stirbt, keine Beute. Dazu die Mob-Dichte um die Spieler (`mon
 
 ## Bauen
 
-Minecraft 26.2 ist nicht verschleiert, Managr baut mit normalem Gradle direkt gegen das Server-Jar, ohne Loom.
+Minecraft 26.3 ist nicht verschleiert, Managr baut mit normalem Gradle direkt gegen das Server-Jar, ohne Loom.
 Java 25 und Gradle nötig:
 
 ```bash

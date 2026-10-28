@@ -6,6 +6,7 @@
 ## [Unreleased]
 
 ### Geändert
+- **Managr 1.1.0** für Minecraft 26.3 (Fabric Loader 0.20.1, Fabric API 0.165.0): `LootContext#getOptional` statt `getOptionalParameter`, `NaturalSpawner#spawnMobsForChunkGeneration` nimmt jetzt eine `BlockPos` statt des Bioms. Für 26.2 bleibt Managr 1.0.0.
 - **Managr 1.0.0** fasst die reinen Server-Mods zusammen: Loot Scaler 1.0.2, Spawn Guard 1.1.0 (bisher eigener Ordner außerhalb des Repos) und Stumm 1.5.0. Paket `io.github.dschonas04.managr`, Konfigurationsdateien unverändert, die alten Jars werden per `breaks` ausgeschlossen.
 
 ### Hinzugefügt
