@@ -68,5 +68,5 @@ jobs:
           if gh release view "$TAG" >/dev/null 2>&1; then
             gh release upload "$TAG" $jars --clobber
           else
-            gh release create "$TAG" $jars --title "Managr $version" --notes-file notes.md
+            gh release create "$TAG" $jars --title "Serververwaltung $version" --notes-file notes.md
           fi
