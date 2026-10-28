@@ -1,9 +1,12 @@
 # Changelog
 
-Änderungen am Repo als Ganzem. Die Mods haben eigene Versionen; Loot Scaler führt
-zusätzlich [sein eigenes Changelog](mods/loot-scaler/CHANGELOG.md).
+Änderungen am Repo als Ganzem. Managr hat eine eigene Version; die Vorgeschichte des Beute-Teils steht in
+[CHANGELOG-beute.md](mods/managr/CHANGELOG-beute.md).
 
 ## [Unreleased]
+
+### Geändert
+- **Managr 1.0.0** fasst die reinen Server-Mods zusammen: Loot Scaler 1.0.2, Spawn Guard 1.1.0 (bisher eigener Ordner außerhalb des Repos) und Stumm 1.5.0. Paket `io.github.dschonas04.managr`, Konfigurationsdateien unverändert, die alten Jars werden per `breaks` ausgeschlossen.
 
 ### Hinzugefügt
 - stumm 1.5.0: Tierwache protokolliert getötete Tiere mit Täter, Ort und Besitzer (Log und `logs/tiere.log`).

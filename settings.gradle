@@ -1,4 +1,3 @@
 rootProject.name = 'mc-serververwaltung'
 
-include 'mods:loot-scaler'
-include 'mods:stumm'
+include 'mods:managr'

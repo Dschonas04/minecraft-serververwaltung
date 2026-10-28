@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "id": "managr",
+  "version": "${version}",
+  "name": "Managr",
+  "description": "Server tools in one mod: less loot from ores and mobs (config/loot-scaler.properties), no hostile spawns around the spawn and adjustable mob density (config/spawn-guard.properties), muting, tool and animal watch, donor board with golden names and witch huts. Server only.",
+  "authors": ["Dschonas04"],
+  "contact": {
+    "homepage": "https://github.com/Dschonas04/minecraft-serververwaltung",
+    "sources": "https://github.com/Dschonas04/minecraft-serververwaltung",
+    "issues": "https://github.com/Dschonas04/minecraft-serververwaltung/issues"
+  },
+  "license": "MIT",
+  "environment": "server",
+  "entrypoints": {
+    "main": [
+      "io.github.dschonas04.managr.beute.LootScaler",
+      "io.github.dschonas04.managr.spawnschutz.SpawnGuard",
+      "io.github.dschonas04.managr.stumm.Stumm"
+    ]
+  },
+  "mixins": ["managr.mixins.json"],
+  "breaks": {
+    "loot-scaler": "*",
+    "spawn-guard": "*",
+    "stumm": "*"
+  },
+  "depends": {
+    "fabricloader": ">=0.19.0",
+    "fabric-api": "*",
+    "minecraft": ">=26.2",
+    "java": ">=21"
+  }
+}

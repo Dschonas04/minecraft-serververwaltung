@@ -4,12 +4,29 @@ Werkzeuge zum Verwalten eines Minecraft-Servers (Fabric, Minecraft 26.2): eigene
 
 | Ordner | Inhalt |
 |---|---|
-| [`mods/loot-scaler`](mods/loot-scaler) | **Loot Scaler**: Erze und Mobs geben weniger Beute, Mengen statt Chancen (MIT, eigene [README](mods/loot-scaler/README.md)) |
-| [`mods/stumm`](mods/stumm) | **Stumm**: Verwaltungs-Mod, nur Server (siehe unten) |
+| [`mods/managr`](mods/managr) | **Managr**: alle reinen Server-Mods in einer – Beute, Spawnschutz und Verwaltung (siehe unten) |
 | [`datenpakete`](datenpakete) | Eigene Datenpakete der Welt |
 | [`skripte`](skripte) | Allgemeine Werkzeuge: RCON, Chunky im Leerlauf, Telegram-Brücke, Welt-Scans, ChestLogger-Auswertung, Bau-Skripte mit Parametern |
 
-## Stumm
+## Managr
+
+Eine Mod, nur Server, braucht Fabric API. Sie fasst seit 1.0.0 die früheren Einzel-Mods Loot Scaler, Spawn Guard und
+Stumm zusammen; deren Jars müssen aus dem `mods`-Ordner raus (Managr verweigert sonst den Start). Die Konfigurationsdateien
+bleiben dieselben.
+
+### Beute (ex Loot Scaler)
+
+Erze und Mobs geben weniger: Mengen und der Glück-Bonus werden skaliert, nie die Chance – ein einzelnes Erz bleibt ein Erz.
+Einstellungen in `config/loot-scaler.properties` (`ores`, `mobs`, `never_zero`, `debug`). Ausführlich in
+[README-beute.md](mods/managr/README-beute.md).
+
+### Spawnschutz (ex Spawn Guard)
+
+In einem Quadrat um einen Punkt (Standard: Weltspawn, Radius 10 Chunks) entstehen keine feindlichen Mobs – der Spawnversuch
+fällt weg, nichts stirbt, keine Beute. Dazu die Mob-Dichte um die Spieler (`monster_cap`, `animal_cap`, `water_cap`,
+`ambient_cap`) und wie oft Tiere spawnen dürfen (`animal_interval`). Einstellungen in `config/spawn-guard.properties`.
+
+### Verwaltung (ex Stumm)
 
 | Funktion | Befehl / Datei |
 |---|---|
@@ -23,7 +40,7 @@ Werkzeuge zum Verwalten eines Minecraft-Servers (Fabric, Minecraft 26.2): eigene
 
 ## Bauen
 
-Minecraft 26.2 ist nicht verschleiert, die Mods bauen mit normalem Gradle direkt gegen das Server-Jar, ohne Loom.
+Minecraft 26.2 ist nicht verschleiert, Managr baut mit normalem Gradle direkt gegen das Server-Jar, ohne Loom.
 Java 25 und Gradle nötig:
 
 ```bash
@@ -32,7 +49,7 @@ gradle build          # Jars in mods/*/build/libs/
 ```
 
 `libs/` ist nicht im Repo, das Minecraft-Jar darf nicht weitergegeben werden.
-Ein Tag `v*` baut beide Mods und hängt die Jars an ein GitHub-Release.
+Ein Tag `v*` baut Managr und hängt die Jars an ein GitHub-Release.
 
 ## Lizenz
 

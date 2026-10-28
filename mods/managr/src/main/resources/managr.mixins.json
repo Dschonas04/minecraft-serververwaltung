@@ -1,0 +1,14 @@
+{
+  "required": true,
+  "package": "io.github.dschonas04.managr.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+    "beute.LootPoolMixin",
+    "spawnschutz.MobCategoryMixin",
+    "spawnschutz.NaturalSpawnerMixin",
+    "spawnschutz.ServerLevelMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

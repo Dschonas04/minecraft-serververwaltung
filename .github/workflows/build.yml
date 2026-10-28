@@ -1,6 +1,6 @@
 name: Build
 
-# Builds both mods on every push and pull request. A tag v* (or a manual run
+# Builds Managr on every push and pull request. A tag v* (or a manual run
 # with a tag) also publishes a GitHub release with the jars and the matching
 # section of CHANGELOG.md.
 
@@ -68,5 +68,5 @@ jobs:
           if gh release view "$TAG" >/dev/null 2>&1; then
             gh release upload "$TAG" $jars --clobber
           else
-            gh release create "$TAG" $jars --title "Serververwaltung $version" --notes-file notes.md
+            gh release create "$TAG" $jars --title "Managr $version" --notes-file notes.md
           fi
