@@ -26,8 +26,8 @@ bekommt einen eigenen Unterordner. Nur Server-Seite, keine Client-Mod nötig.
 
 | Idee | Befehl / Datei | Nutzen |
 |---|---|---|
-| Sicherung vor Umbau | `/sichern <x z> <radius>` (Ops) | kopiert die betroffenen `.mca`-Dateien nach `sicherungen/<datum>/` – Lehre aus dem Berg-Absenken am 08.10. |
-| Explosionsschutz | `config/explosionen.properties` (`spawn_radius`, `creeper`, `tnt`) | keine Blockschäden durch Creeper/TNT im Spawnbereich, Rest der Welt bleibt wie er ist; wichtig mit TNT Arsenal |
+| ✅ Sicherung vor Umbau (1.2.0) | `/sichern <x z> <radius>` (Ops) | kopiert die betroffenen `.mca`-Dateien nach `sicherungen/<datum>/` – Lehre aus dem Berg-Absenken am 08.10. |
+| ✅ Explosionsschutz (1.2.0, Schalter `protect_blocks_from_explosions`) | `config/explosionen.properties` (`spawn_radius`, `creeper`, `tnt`) | keine Blockschäden durch Creeper/TNT im Spawnbereich, Rest der Welt bleibt wie er ist; wichtig mit TNT Arsenal |
 | TNT-Freigabe | `/tnt erlauben <Spieler>` | nur freigegebene Spieler dürfen TNT-Arsenal-Sprengstoff zünden |
 | Feuer am Spawn | in `spawn-guard.properties`: `feuer=false` | kein Feuerausbreiten und kein Blitzfeuer im Schutzbereich |
 | Endermen-Griefing | `enderman_bloecke=false` | Endermen nehmen keine Blöcke mehr, ohne `mobGriefing` global abzuschalten |
@@ -61,7 +61,7 @@ bekommt einen eigenen Unterordner. Nur Server-Seite, keine Client-Mod nötig.
 
 ## Reihenfolge (Vorschlag)
 
-1. Sicherung vor Umbau, Explosionsschutz am Spawn – schützt, was schon gebaut ist.
+1. ~~Sicherung vor Umbau, Explosionsschutz am Spawn~~ – erledigt in 1.2.0.
 2. Grundstücke oder Kistenschutz – verhindert die meisten Streitfälle.
 3. Prometheus-Exporter – Serverlast endlich in Grafana.
 4. Neustart-Countdown, Wartungsmodus – kleine Mühe, oft gebraucht.

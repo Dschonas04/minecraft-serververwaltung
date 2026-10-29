@@ -27,7 +27,9 @@ Einstellungen in `config/loot-scaler.properties` (`ores`, `mobs`, `never_zero`, 
 
 In einem Quadrat um einen Punkt (Standard: Weltspawn, Radius 10 Chunks) entstehen keine feindlichen Mobs – der Spawnversuch
 fällt weg, nichts stirbt, keine Beute. Dazu die Mob-Dichte um die Spieler (`monster_cap`, `animal_cap`, `water_cap`,
-`ambient_cap`) und wie oft Tiere spawnen dürfen (`animal_interval`). Einstellungen in `config/spawn-guard.properties`.
+`ambient_cap`) und wie oft Tiere spawnen dürfen (`animal_interval`). Mit `protect_blocks_from_explosions = yes` zerstören
+Explosionen (Creeper, TNT, auch TNT Arsenal, sofern es Vanilla-Explosionen nutzt) im Bereich keine Blöcke mehr; Knall, Rückstoß
+und Schaden bleiben. Einstellungen in `config/spawn-guard.properties`.
 
 ### Verwaltung (ex Stumm)
 
@@ -36,6 +38,7 @@ fällt weg, nichts stirbt, keine Beute. Dazu die Mob-Dichte um die Spieler (`mon
 | Spieler stummschalten | `/stumm <Spieler>`, `/laut <Spieler>`, `/stumm liste` (Ops), Liste in `config/stumm.txt` |
 | Spender | `/spende <Spieler> <Euro>`, `/spende setzen`, `/spende entfernen`, `/spende liste` (Ops), `/spender` für alle; Daten in `config/spender.txt` |
 | Ehrentafel | schwebende Top-10-Spendertafel am Spawn (0.5 66.2 -8.5), Spender haben goldene Namen |
+| Sicherung vor Umbau | `/sichern <x z> <Radius>` (Ops) speichert die Welt und kopiert alle Regionsdateien (Blöcke, Wesen, POI) der aktuellen Dimension, die das Quadrat berühren, nach `sicherungen/<Zeitpunkt>/` neben dem Weltordner. Zurückspielen: Server stoppen, Dateien zurückkopieren |
 | Hexenhütte | `/hexenhuette <x y z>` (Ops) legt an beliebiger Stelle eine Sumpfhütten-Struktur ohne Blöcke an (7 × 7 × 9, kleinste Ecke an der Stelle); darin erscheinen Hexen wie in einer echten Hütte |
 | Werkzeugwache | Log-Zeile `Werkzeugwache`, wenn einem Spieler ein Gegenstand mit Haltbarkeit aus dem Inventar verschwindet (Ort, Dimension, vermuteter Grund) |
 | Tierwache | jedes von einem Spieler getötete Tier (alle Mobs außer Monstern) mit Täter, Ort und Besitzer ins Log und nach `logs/tiere.log`; benannte, gezähmte Tiere und Happy Ghasts auch ohne Spieler als Täter |

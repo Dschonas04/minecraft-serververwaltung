@@ -35,6 +35,12 @@ public final class Einstellungen {
      */
     public boolean blockOtherSources = true;
 
+    /**
+     * Explosions (creepers, TNT, beds in the nether, ...) break and ignite no blocks inside the
+     * area. The blast itself still happens and still hurts.
+     */
+    public boolean protectBlocksFromExplosions = false;
+
     /** How many monsters may live around the players, as a multiple of vanilla. */
     public double monsterCap = 1.0;
 
@@ -80,6 +86,10 @@ public final class Einstellungen {
             # monster spawners, patrols, mod spawners, spawn eggs and /summon are stopped as well.
             block_other_sources = %s
 
+            # With this set to yes, explosions break and ignite no blocks inside the area. The
+            # blast still happens: sound, knockback and damage to mobs and players stay.
+            protect_blocks_from_explosions = %s
+
             # How many mobs may live around the players, as a multiple of vanilla. 1.0 is
             # vanilla, 1.5 is half as many again. Vanilla allows 70 monsters, 10 animals,
             # 5 water creatures and 15 ambient mobs per 289 loaded chunks.
@@ -122,6 +132,7 @@ public final class Einstellungen {
                     case "center_z" -> werte.centerZ = ganz(wert, werte.centerZ);
                     case "radius_chunks" -> werte.radiusChunks = ganz(wert, werte.radiusChunks);
                     case "block_other_sources" -> werte.blockOtherSources = ja(wert);
+                    case "protect_blocks_from_explosions" -> werte.protectBlocksFromExplosions = ja(wert);
                     case "monster_cap" -> werte.monsterCap = zahl(wert, werte.monsterCap);
                     case "animal_cap" -> werte.animalCap = zahl(wert, werte.animalCap);
                     case "water_cap" -> werte.waterCap = zahl(wert, werte.waterCap);
@@ -171,6 +182,7 @@ public final class Einstellungen {
             Files.writeString(pfad, VORLAGE.formatted(enabled ? "yes" : "no", dimension,
                     centerX, centerZ, radiusChunks,
                     blockOtherSources ? "yes" : "no",
+                    protectBlocksFromExplosions ? "yes" : "no",
                     monsterCap, animalCap, waterCap, ambientCap, animalIntervalTicks,
                     debug ? "yes" : "no"));
             SpawnGuard.LOG.info("wrote a fresh {}", pfad);

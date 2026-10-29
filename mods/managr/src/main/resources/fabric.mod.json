@@ -3,7 +3,7 @@
   "id": "managr",
   "version": "${version}",
   "name": "Managr",
-  "description": "Server tools in one mod: less loot from ores and mobs (config/loot-scaler.properties), no hostile spawns around the spawn and adjustable mob density (config/spawn-guard.properties), muting, tool and animal watch, donor board with golden names and witch huts. Server only.",
+  "description": "Server tools in one mod: less loot from ores and mobs (config/loot-scaler.properties), no hostile spawns around the spawn and adjustable mob density (config/spawn-guard.properties), no explosion damage around the spawn, backups before terraforming (/sichern), muting, tool and animal watch, donor board with golden names and witch huts. Server only.",
   "authors": [{"name": "Dschonas04", "contact": {"homepage": "https://github.com/Dschonas04"}}],
   "contact": {
     "homepage": "https://github.com/Dschonas04/minecraft-serververwaltung",

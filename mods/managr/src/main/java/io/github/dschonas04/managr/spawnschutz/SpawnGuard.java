@@ -37,5 +37,8 @@ public final class SpawnGuard implements ModInitializer {
                 einstellungen.radiusChunks, einstellungen.dimension,
                 einstellungen.centerX, einstellungen.centerZ,
                 einstellungen.blockOtherSources ? ", other spawn sources blocked too" : "");
+        if (einstellungen.protectBlocksFromExplosions) {
+            LOG.info("explosions break no blocks inside the area");
+        }
     }
 }

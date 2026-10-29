@@ -6,7 +6,9 @@
     "beute.LootPoolMixin",
     "spawnschutz.MobCategoryMixin",
     "spawnschutz.NaturalSpawnerMixin",
-    "spawnschutz.ServerLevelMixin"
+    "spawnschutz.ServerLevelMixin",
+    "spawnschutz.ServerExplosionMixin",
+    "stumm.MinecraftServerAccessor"
   ],
   "injectors": {
     "defaultRequire": 1

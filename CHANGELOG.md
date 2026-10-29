@@ -5,6 +5,10 @@
 
 ## [Unreleased]
 
+### Hinzugefügt
+- **Managr 1.2.0**: `/sichern <x z> <Radius>` sichert vor einem Geländeumbau die betroffenen Regionsdateien (region, entities, poi) nach `sicherungen/<Zeitpunkt>/`.
+- **Managr 1.2.0**: Explosionsschutz im Spawnschutz-Bereich (`protect_blocks_from_explosions`, Standard aus): Explosionen zerstören und entzünden dort keine Blöcke, Schaden und Rückstoß bleiben.
+
 ### Geändert
 - **Managr 1.1.0** für Minecraft 26.3 (Fabric Loader 0.20.1, Fabric API 0.165.0): `LootContext#getOptional` statt `getOptionalParameter`, `NaturalSpawner#spawnMobsForChunkGeneration` nimmt jetzt eine `BlockPos` statt des Bioms. Für 26.2 bleibt Managr 1.0.0.
 - **Managr 1.0.0** fasst die reinen Server-Mods zusammen: Loot Scaler 1.0.2, Spawn Guard 1.1.0 (bisher eigener Ordner außerhalb des Repos) und Stumm 1.5.0. Paket `io.github.dschonas04.managr`, Konfigurationsdateien unverändert, die alten Jars werden per `breaks` ausgeschlossen.
