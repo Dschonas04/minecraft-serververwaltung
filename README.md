@@ -1,6 +1,6 @@
 # mc-serververwaltung
 
-Werkzeuge zum Verwalten eines Minecraft-Servers (Fabric, Minecraft 26.1.x – Zweig mc/26.1; aktuell ist main): eigene Server-Mods, Datenpakete und Skripte.
+Werkzeuge zum Verwalten eines Minecraft-Servers (Fabric, Minecraft 1.21.11 – Zweig mc/1.21.11, gebaut mit Loom und Mojang-Mappings; aktuell ist main): eigene Server-Mods, Datenpakete und Skripte.
 
 | Ordner | Inhalt |
 |---|---|

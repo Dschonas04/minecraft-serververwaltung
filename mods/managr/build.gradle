@@ -1,42 +1,25 @@
-// Managr: Loot Scaler, Spawn Guard und Stumm in einer Server-Mod. Minecraft 26.2 bringt lesbare
-// Klassennamen mit, deshalb wird direkt gegen das Server-Jar gebaut, ohne Mappings.
-// Braucht die Bibliotheken aus tools/fetch-libs.sh in libs/.
+// Managr für Minecraft 1.21.11. Vor 26.1 ist Minecraft verschleiert, deshalb baut dieser Zweig
+// mit Loom und den offiziellen Mojang-Mappings statt direkt gegen das Server-Jar.
 plugins {
-    id 'java'
+    id 'fabric-loom' version "${loom_version}"
 }
 
 version = project.mod_version
 group = project.maven_group
 
-repositories {
-    mavenCentral()
-    maven { name = 'Fabric'; url = 'https://maven.fabricmc.net/' }
-}
-
-def libs = rootProject.file('libs')
+base { archivesName = project.archives_base_name }
 
 dependencies {
-    compileOnly files("${libs}/server.jar")
-    // Alles, was im Server-Bundle steckt (Brigadier, Log4j, Netty, ...): Minecrafts Signaturen brauchen es.
-    compileOnly fileTree(dir: "${libs}/mc", include: '*.jar')
-    // Die Fabric-API-Module, die Stumm nutzt (Liste in gradle.properties).
-    compileOnly fileTree(dir: "${libs}/fabric", include: '*.jar')
-    compileOnly "net.fabricmc:fabric-loader:${project.loader_version}"
-    compileOnly "net.fabricmc:sponge-mixin:${project.mixin_version}"
+    minecraft "com.mojang:minecraft:${project.minecraft_version}"
+    mappings loom.officialMojangMappings()
+    modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
+    modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_api_version}"
 }
 
 java {
     sourceCompatibility = JavaVersion.VERSION_21
     targetCompatibility = JavaVersion.VERSION_21
     withSourcesJar()
-}
-
-tasks.named('compileJava') {
-    doFirst {
-        if (!file("${libs}/server.jar").exists()) {
-            throw new GradleException("libs/server.jar fehlt: erst tools/fetch-libs.sh ausführen")
-        }
-    }
 }
 
 processResources {
@@ -47,10 +30,5 @@ processResources {
 }
 
 jar {
-    archiveBaseName = project.archives_base_name
     from(rootProject.file('LICENSE')) { rename { "${it}_${project.archives_base_name}" } }
-    manifest {
-        attributes 'Implementation-Title': 'Managr',
-                   'Implementation-Version': project.version
-    }
 }

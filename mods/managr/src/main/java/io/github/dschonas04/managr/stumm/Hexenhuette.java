@@ -46,12 +46,12 @@ final class Hexenhuette {
         teil.move(ecke.getX() - bb.minX(), ecke.getY() - bb.minY(), ecke.getZ() - bb.minZ());
         BoundingBox box = teil.getBoundingBox();
 
-        ChunkPos start = ChunkPos.containing(ecke);
-        level.getChunk(start.x(), start.z()).setStartForStructure(huette, new StructureStart(huette, start, 0, new PiecesContainer(List.of(teil))));
+        ChunkPos start = new ChunkPos(ecke);
+        level.getChunk(start.x, start.z).setStartForStructure(huette, new StructureStart(huette, start, 0, new PiecesContainer(List.of(teil))));
         for (int cx = box.minX() >> 4; cx <= box.maxX() >> 4; cx++) {
             for (int cz = box.minZ() >> 4; cz <= box.maxZ() >> 4; cz++) {
                 LevelChunk chunk = level.getChunk(cx, cz);
-                chunk.addReferenceForStructure(huette, start.pack());
+                chunk.addReferenceForStructure(huette, start.toLong());
                 chunk.markUnsaved();
             }
         }
