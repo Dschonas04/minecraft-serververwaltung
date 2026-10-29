@@ -11,7 +11,6 @@ import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Locale;
 import java.util.Map;
-import java.util.Optional;
 import net.fabricmc.fabric.api.command.v2.CommandRegistrationCallback;
 import net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents;
 import net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents;
@@ -23,7 +22,6 @@ import net.minecraft.server.MinecraftServer;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.scores.PlayerTeam;
 import net.minecraft.world.scores.Scoreboard;
-import net.minecraft.world.scores.TeamColor;
 
 /**
  * Spender: Operatoren tragen Spenden ein (/spende), die Top 10 stehen auf einer Ehrentafel am Spawn,
@@ -124,15 +122,15 @@ final class Spender {
         PlayerTeam spender = board.getPlayerTeam(TEAM);
         if (spender == null) {
             spender = board.addPlayerTeam(TEAM);
-            spender.setColor(Optional.of(TeamColor.GOLD));
+            spender.setColor(ChatFormatting.GOLD);
         }
         for (ServerPlayer player : server.getPlayerList().getPlayers()) {
             String name = player.getGameProfile().name();
             boolean gold = istSpender(name);
             PlayerTeam team = board.getPlayersTeam(name);
             if (team != null && team.getName().startsWith("platz")) {
-                Optional<TeamColor> farbe = gold ? Optional.of(TeamColor.GOLD) : Optional.empty();
-                if (!team.getColor().equals(farbe)) team.setColor(farbe);
+                ChatFormatting farbe = gold ? ChatFormatting.GOLD : ChatFormatting.RESET;
+                if (team.getColor() != farbe) team.setColor(farbe);
             } else if (gold && team == null) {
                 board.addPlayerToTeam(name, spender);
             } else if (!gold && team == spender) {

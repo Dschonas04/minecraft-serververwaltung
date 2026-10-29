@@ -59,13 +59,13 @@ public abstract class NaturalSpawnerMixin {
     }
 
     /** Lets friendly mobs try to spawn more often than vanilla's 400 ticks. */
-    @ModifyVariable(method = "getFilteredSpawningCategories(Lnet/minecraft/world/level/NaturalSpawner$SpawnState;ZZ)Ljava/util/List;", at = @At("HEAD"), argsOnly = true, index = 1)
+    @ModifyVariable(method = "getFilteredSpawningCategories(Lnet/minecraft/world/level/NaturalSpawner$SpawnState;ZZZ)Ljava/util/List;", at = @At("HEAD"), argsOnly = true, index = 1)
     private static boolean spawnguard$tiere(boolean vanilla) {
         return Dichte.tiereDuerfen(vanilla);
     }
 
-    /** The same call's second switch, which covers the categories that stay loaded. */
-    @ModifyVariable(method = "getFilteredSpawningCategories(Lnet/minecraft/world/level/NaturalSpawner$SpawnState;ZZ)Ljava/util/List;", at = @At("HEAD"), argsOnly = true, index = 2)
+    /** The same call's persistent switch (26.1 has a third one for enemies in between). */
+    @ModifyVariable(method = "getFilteredSpawningCategories(Lnet/minecraft/world/level/NaturalSpawner$SpawnState;ZZZ)Ljava/util/List;", at = @At("HEAD"), argsOnly = true, index = 3)
     private static boolean spawnguard$bleibende(boolean vanilla) {
         return Dichte.tiereDuerfenNoch(vanilla);
     }
