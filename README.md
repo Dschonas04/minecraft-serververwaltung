@@ -13,6 +13,7 @@ Werkzeuge zum Verwalten eines Minecraft-Servers (Fabric, Minecraft 26.3): eigene
 Eine Mod, nur Server, braucht Fabric API. Sie fasst seit 1.0.0 die früheren Einzel-Mods Loot Scaler, Spawn Guard und
 Stumm zusammen; deren Jars müssen aus dem `mods`-Ordner raus (Managr verweigert sonst den Start). Die Konfigurationsdateien
 bleiben dieselben.
+Ideen zum Erweitern: [mods/managr/IDEEN.md](mods/managr/IDEEN.md).
 
 ![Spender-Ehrentafel am Spawn, gesetzt mit /spende](docs/bilder/spendertafel.jpg)
 
