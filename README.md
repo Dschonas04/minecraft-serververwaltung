@@ -14,6 +14,8 @@ Eine Mod, nur Server, braucht Fabric API. Sie fasst seit 1.0.0 die früheren Ein
 Stumm zusammen; deren Jars müssen aus dem `mods`-Ordner raus (Managr verweigert sonst den Start). Die Konfigurationsdateien
 bleiben dieselben.
 
+![Spender-Ehrentafel am Spawn, gesetzt mit /spende](docs/bilder/spendertafel.jpg)
+
 ### Beute (ex Loot Scaler)
 
 Erze und Mobs geben weniger: Mengen und der Glück-Bonus werden skaliert, nie die Chance – ein einzelnes Erz bleibt ein Erz.
