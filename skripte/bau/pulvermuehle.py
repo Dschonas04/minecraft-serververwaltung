@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# Autor: Dschonas04 (https://github.com/Dschonas04)
 """Schwarzpulver-Mühle mit Create (Mod create_ultimate_factory): offene Hütte mit Wasserrad, Mixer und Becken.
 Kohle oder Holzkohle und Lohenstaub in die obere Kiste, unten kommt Schwarzpulver heraus
 (2 Kohle + 1 Lohenstaub = 3 Schwarzpulver).

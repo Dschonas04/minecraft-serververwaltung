@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# Autor: Dschonas04 (https://github.com/Dschonas04)
 """Fichtenhütte 9x9 mit Satteldach: Bett, Fässer, Werkbank, Ofen, Räucherofen, Hängelaterne, Namensschild.
 
 --ort ist die Nordwestecke des Fundaments (Bodenhöhe); die Tür liegt mittig auf der Nordseite.

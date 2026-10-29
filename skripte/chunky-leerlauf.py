@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# Autor: Dschonas04 (https://github.com/Dschonas04)
 """Chunky nebenbei, aber nur so viel, wie der Server verkraftet.
 
 Misst die Tickzeit (/tick query). Läuft der Server locker, rechnet Chunky weiter; wird es eng, pausiert er,

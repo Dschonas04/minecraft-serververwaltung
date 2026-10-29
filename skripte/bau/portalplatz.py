@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# Autor: Dschonas04 (https://github.com/Dschonas04)
 """Runder Portalplatz mit entzündetem Nether-Portal im Norden und, wenn die Mod Aerial Hell installiert ist,
 einem Aerial-Hell-Portal im Süden. Steinboden mit Kompassmitte, Laternen am Rand.
 

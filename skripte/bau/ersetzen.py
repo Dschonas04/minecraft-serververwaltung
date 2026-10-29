@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# Autor: Dschonas04 (https://github.com/Dschonas04)
 """Ersetzt Blöcke in einem Gebiet, z. B. Spuren von Explosionen oder Mod-Blöcke.
 
   ersetzen.py --mitte "0 0" --radius 96 --von 55 --bis 110 --tausch tnt_arsenal:irradiated_earth=grass_block \\

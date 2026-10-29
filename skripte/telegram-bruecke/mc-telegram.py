@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# Autor: Dschonas04 (https://github.com/Dschonas04)
 # Brücke zwischen dem Chat eines Minecraft-Servers und einer Telegram-Gruppe.
 # Umgebung: TG_TOKEN (Bot-Token), MC_DIR (Server-Verzeichnis), optional MC_NAME (Anzeigename),
 # STATE_DIR (Zustand: Chat-ID, Update-Stand). Den Bot in die Gruppe einladen; die erste Gruppe wird verbunden.

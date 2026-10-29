@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# Autor: Dschonas04 (https://github.com/Dschonas04)
 """Pflanzt Bäume und Blumenflecken auf Gras (per /place feature, also wie natürlich gewachsen).
 Gebäude und Wege sind über --frei ausgespart.
 

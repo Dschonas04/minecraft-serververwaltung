@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# Autor: Dschonas04 (https://github.com/Dschonas04)
 """Gerader Trampelpfad mit Laternenpfählen im Wechsel links und rechts. Läuft entlang x oder z
 (von --von nach --bis; bei schrägen Strecken erst x, dann z).
 

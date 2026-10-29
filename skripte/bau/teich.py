@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# Autor: Dschonas04 (https://github.com/Dschonas04)
 """Natürlicher Teich: leicht unregelmäßiger Rand, bis zu 3 Blöcke tief, Sand/Kies/Ton am Grund,
 Seegras, Seerosen und Zuckerrohr am Ufer.
 

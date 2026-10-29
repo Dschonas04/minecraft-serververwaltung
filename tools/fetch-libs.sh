@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+# Autor: Dschonas04 (https://github.com/Dschonas04)
 # Holt nach libs/, was der Bau braucht, aber nicht ins Repo gehört: das
 # Minecraft-Server-Jar von Mojang (libs/server.jar), die darin gebündelten
 # Bibliotheken (libs/mc/) und die Fabric-API-Module (libs/fabric/).

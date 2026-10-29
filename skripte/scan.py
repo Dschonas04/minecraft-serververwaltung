@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# Autor: Dschonas04 (https://github.com/Dschonas04)
 """Liest die Welt direkt aus den Regionsdateien (nur lesend, auch bei laufendem Server).
 
   scan.py hoehen  --mitte "0 0" --radius 64 [--raster 4]     Höhenkarte, ~ = Wasser

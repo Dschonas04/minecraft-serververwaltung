@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# Autor: Dschonas04 (https://github.com/Dschonas04)
 """Wertet die Mod ChestLogger aus: wer hat aus den Kisten bestimmter Besitzer etwas genommen?
 Nutzt die Besitzerliste world/chestlogger/claims.json und fragt jede Kiste per RCON ab (/chestlog inspect).
 

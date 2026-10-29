@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# Autor: Dschonas04 (https://github.com/Dschonas04)
 """Marktviertel: gepflasterte Straße mit Ständen auf beiden Seiten (Fass-Theke, Lagerfässer,
 gestreifte Markise, Laternen), Laternenpfählen, Deko und Brunnen am Ende.
 

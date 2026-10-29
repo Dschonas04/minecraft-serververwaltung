@@ -1,3 +1,4 @@
+# Autor: Dschonas04 (https://github.com/Dschonas04)
 """Gemeinsame Bausteine für die Skripte: Server finden, RCON, Weltdateien lesen, Bauten ausgeben.
 
 Das Server-Verzeichnis kommt aus --server, sonst aus der Umgebungsvariable MC_DIR, sonst ist es das

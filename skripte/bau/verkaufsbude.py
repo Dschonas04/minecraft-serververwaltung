@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# Autor: Dschonas04 (https://github.com/Dschonas04)
 """Große Verkaufsbude mit Händler: Fass-Theke, Lagerfässer, Leuchtrahmen mit der Ware an der Rückwand,
 Leuchtschilder und ein Schmuckstück dahinter. Zwei Stile:
 

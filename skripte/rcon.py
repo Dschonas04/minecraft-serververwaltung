@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# Autor: Dschonas04 (https://github.com/Dschonas04)
 """Befehle per RCON an den Server schicken. Kennwort und Port aus server.properties.
 
   rcon.py list                      ein Befehl
